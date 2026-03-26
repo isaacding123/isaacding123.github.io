@@ -1,0 +1,25 @@
+body {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.light {
+    background-color: #eaeaea;
+    color: #252525;
+}
+body.dark {
+    background-color: #252525;
+    color: #eaeaea;
+}
+select {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+select.light {
+    background-color: #eaeaea;
+    color: #252525;
+}
+select.dark {
+    background-color: #252525;
+    color: #eaeaea;
+}
