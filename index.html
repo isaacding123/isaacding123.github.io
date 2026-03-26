@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body.light {
+            background-color: #eaeaea;
+            color: #252525;
+        }
+        body.dark {
+            background-color: #252525;
+            color: #eaeaea;
+        }
+        select {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+        select.light {
+            background-color: #eaeaea;
+            color: #252525;
+        }
+        select.dark {
+            background-color: #252525;
+            color: #eaeaea;
+        }
+    </style>
+    <script>
+        function upd_theme() {
+            hour = new Date().getHours()
+            body = document.body
+            select = document.getElementById("lang")
+            body.classList.remove("light", "dark")
+            select.classList.remove("light", "dark")
+            if (hour >= 6 && hour <= 18) {
+                body.classList.add("light")
+                select.classList.add("light")
+            }
+            else {
+                body.classList.add("dark")
+                select.classList.add("dark")
+            }
+        }
+        setInterval(upd_theme, 5000)
+    </script>
+</head>
+
+<body>
+    <select name = "language" id = "lang" class = "select">
+        <option value = "zh-cn">中文</option>
+        <option value = "en-us" >English</option>
+    </select>
+    <h2>
+        nothing here!
+    </h2>
+</body>
