@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <head>
-    <style>@import "style.css";</style>
-    <script src = "lang.js"></script>
+    <style>@import "./style.css";</style>
+    <script src = "./lang.js"></script>
     <script>
-        text = window.lang;
-        lang = "en-us";
+        text = window.lang
+        lang = "en-us"
 
         function upd_theme() {
             hour = new Date().getHours()
-            body = document.body
-            select = document.getElementById("lang")
-            body.classList.remove("light", "dark")
-            select.classList.remove("light", "dark")
+            element = document.querySelectorAll('[theme]')
+            element.forEach(i => {
+                i.classList.remove("light", "dark")
+                if (hour >= 6 && hour <= 18) {
+                    i.classList.add("light")
+                }
+                else {
+                    i.classList.add("dark")
+                }
+            })
+            document.body.classList.remove("light", "dark")
             if (hour >= 6 && hour <= 18) {
-                body.classList.add("light")
-                select.classList.add("light")
+                document.body.classList.add("light")
             }
             else {
-                body.classList.add("dark")
-                select.classList.add("dark")
+                document.body.classList.add("dark")
             }
         }
         function upd_lang(lang) {
-            document.querySelectorAll('[data-0]').forEach(i => {
-                data = i.getAttribute('data-0');
-                i.textContent = text[lang][data];
-            });
-            document.title = text[lang]['title'];
+            document.querySelectorAll('[text]').forEach(i => {
+                data = i.getAttribute('text')
+                i.textContent = text[lang][data]
+            })
+            document.title = text[lang]['title']
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("lang").addEventListener("change", function (e) { upd_lang(e.target.value) });
-            upd_lang(lang);
-            upd_theme();
-            setInterval(upd_theme, 5000);
-        });
+            document.getElementById("lang").addEventListener("change", function (e) { upd_lang(e.target.value) })
+            upd_lang(lang)
+            upd_theme()
+            setInterval(upd_theme, 5000)
+        })
     </script>
 </head>
 
 <body>
-    <select name = "language" id = "lang">
-        <option value = "en-us" >English(US)</option>
+    <select name = "language" id = "lang" class = "lang" theme>
+        <option value = "en-us">English(US)</option>
         <option value = "zh-cn">简体中文</option>
     </select>
-    <div data-0 = "text0"></div>
+    <a href = "./project.html" text = "text1" theme></a>
 </body>
