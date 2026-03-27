@@ -1,14 +1,14 @@
 body {
     font-family: Menlo, Monaco, "Courier New", monospace;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.75s;
 }
 body.light {
-    background-color: #eaeaea;
-    color: #252525;
+    background-color: #fafafa;
+    color: #202020;
 }
 body.dark {
-    background-color: #252525;
-    color: #eaeaea;
+    background-color: #202020;
+    color: #fafafa;
 }
 select {
     position: absolute;
@@ -16,10 +16,10 @@ select {
     right: 15px;
 }
 select.light {
-    background-color: #eaeaea;
-    color: #252525;
+    background-color: #fafafa;
+    color: #202020;
 }
 select.dark {
-    background-color: #252525;
-    color: #eaeaea;
+    background-color: #202020;
+    color: #fafafa;
 }
