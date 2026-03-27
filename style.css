@@ -1,6 +1,5 @@
 body {
     font-family: Menlo, Monaco, "Courier New", monospace;
-    transition: background-color 0.75s;
 }
 body.light {
     background-color: #fafafa;
@@ -10,16 +9,27 @@ body.dark {
     background-color: #202020;
     color: #fafafa;
 }
-select {
+.lang {
     position: absolute;
     bottom: 15px;
     right: 15px;
 }
-select.light {
+.lang.light {
     background-color: #fafafa;
     color: #202020;
 }
-select.dark {
+.lang.dark {
+    background-color: #202020;
+    color: #fafafa;
+}
+a {
+    text-decoration: none;
+}
+a.light {
+    background-color: #fafafa;
+    color: #202020;
+}
+a.dark {
     background-color: #202020;
     color: #fafafa;
 }
