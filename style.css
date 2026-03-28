@@ -9,20 +9,15 @@ body.dark {
     background-color: #202020;
     color: #fafafa;
 }
+
 .lang {
     position: absolute;
     bottom: 15px;
     right: 15px;
 }
-.lang.light {
-    background-color: #fafafa;
-    color: #202020;
-}
-.lang.dark {
-    background-color: #202020;
-    color: #fafafa;
-}
+
 a {
+    font-family: Menlo, Monaco, "Courier New", monospace;
     text-decoration: none;
 }
 a.light {
@@ -33,26 +28,79 @@ a.dark {
     background-color: #202020;
     color: #fafafa;
 }
-.input0 {
-    width: 50px;
-}
-.input1 {
-    width: 100px;
-}
-.input2 {
-    width: 150px;
-}
-.input3 {
-    width: 230px;
-}
+
 input {
     font-family: Menlo, Monaco, "Courier New", monospace;
+    border-width: 1px;
+    border-radius: 3px;
+}
+.input0 {
+    width: 70px;
+}
+.input1 {
+    width: 120px;
+}
+.input2 {
+    width: 180px;
+}
+.input3 {
+    width: 260px;
 }
 input.light {
     background-color: #fafafa;
-    color: #202020;
+    border-color: #202020;
+    color: #202020
 }
 input.dark {
     background-color: #202020;
-    color: #fafafa;
+    border-color: #fafafa;
+    color: #fafafa
+}
+
+textarea {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    border-width: 1px;
+    border-radius: 3px;
+}
+textarea.light {
+    background-color: #fafafa;
+    border-color: #202020;
+    color: #202020
+}
+textarea.dark {
+    background-color: #202020;
+    border-color: #fafafa;
+    color: #fafafa
+}
+
+select {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    border-width: 1px;
+    border-radius: 3px;
+}
+select.light {
+    background-color: #fafafa;
+    border-color: #202020;
+    color: #202020
+}
+select.dark {
+    background-color: #202020;
+    border-color: #fafafa;
+    color: #fafafa
+}
+
+button {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    border-width: 1px;
+    border-radius: 3px;
+}
+button.light {
+    background-color: #fafafa;
+    border-color: #202020;
+    color: #202020
+}
+button.dark {
+    background-color: #202020;
+    border-color: #fafafa;
+    color: #fafafa
 }
