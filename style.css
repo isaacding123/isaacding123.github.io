@@ -33,3 +33,26 @@ a.dark {
     background-color: #202020;
     color: #fafafa;
 }
+.input0 {
+    width: 50px;
+}
+.input1 {
+    width: 100px;
+}
+.input2 {
+    width: 150px;
+}
+.input3 {
+    width: 230px;
+}
+input {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+}
+input.light {
+    background-color: #fafafa;
+    color: #202020;
+}
+input.dark {
+    background-color: #202020;
+    color: #fafafa;
+}

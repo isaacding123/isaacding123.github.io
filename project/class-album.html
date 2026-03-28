@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
+    <meta charset = "utf-8">
     <style>@import "../style.css";</style>
     <script src = "../lang.js"></script>
     <script>
-        text = window.lang;
-        lang = "en-us";
+        text = window.lang
+        lang = ""
 
         function upd_theme() {
             hour = new Date().getHours()
@@ -26,20 +27,68 @@
                 document.body.classList.add("dark")
             }
         }
-        function upd_lang(lang) {
-            document.querySelectorAll('[text]').forEach(i => {
-                data = i.getAttribute('text');
-                i.textContent = text[lang][data];
-            });
-            document.title = text[lang]['title'];
+        function upd_lang() {
+            tmp = new URLSearchParams(window.location.search)
+            if (lang == "") {
+                if (tmp.has("lang")) lang = tmp.get("lang")
+                else lang = "en-us"
+            }
+            document.querySelectorAll("[text]").forEach(i => {
+                data = i.getAttribute("text")
+                i.textContent = text[lang][data]
+            })
+            document.title = text[lang]["title2"]
+            tmp.set("lang", lang)
+            tmp = window.location.pathname + "?" + tmp.toString()
+            window.history.replaceState({}, "", tmp)
+        }
+        async function submit(e) {
+            e.preventDefault()
+            target_url = "http://192.168.71.22:8080/submit"
+            form = new FormData(document.getElementById('form')).entries()
+            result = document.getElementById('result')
+            json = {}
+            for ([key, value] of form) {
+                json[key] = value
+            }
+            result.innerHTML = "posting to" + target_url
+            try {
+                response = await fetch(target_url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(json)
+                })
+                responseText = ""
+                if (response.headers.get("content-type")?.includes("application/json")) {
+                    responseText = JSON.stringify(await response.json())
+                }
+                else {
+                    responseText = await response.text()
+                }
+                if (response.ok) {
+                    result.innerHTML = `Posted successfully:<br>status: ${response.status}<br>response: ${responseText}`
+                }
+                else {
+                    result.innerHTML = `Error:<br>failed to post to ${target_url}<br>status: ${response.status}<br>${response.statusText}<br>response text: ${responseText}<br><br>Please try it later.`
+                }
+            }
+            catch (error) {
+                result.innerHTML = `Error:<br>failed to post to ${target_url}<br>message: ${error.message}<br><br>Please try it later.`
+            }
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("lang").addEventListener("change", function (e) { upd_lang(e.target.value) });
-            upd_lang(lang);
-            upd_theme();
-            setInterval(upd_theme, 5000);
-        });
+            document.getElementById("lang").addEventListener("change", function (e) { lang = e.target.value; upd_lang() })
+            document.getElementById("form").addEventListener("submit", async function(e) { submit(e) })
+            upd_lang(); upd_theme()
+            setInterval(upd_theme, 5000)
+            tmp = new URLSearchParams(window.location.search)
+            if (Array.from(document.getElementById("lang").options).some(t => t.value == tmp.get("lang"))) {
+                document.getElementById("lang").value = tmp.get("lang")
+            }
+        })
     </script>
 </head>
 
@@ -48,5 +97,41 @@
         <option value = "en-us">English(US)</option>
         <option value = "zh-cn">简体中文</option>
     </select>
-    <div text = "text0" theme></div>
+    <form id = "form">
+        <label text = "text3"></label>
+        <input type = "text" name = "name" required class = "input1"><br><br>
+
+        <label text = "text4"></label>
+        <input type = "number" name = "birthm" required class = "input0" max = "12" min = "1">
+        <label text = "text13"></label>
+        <input type = "number" name = "birthd" required class = "input0" max = "31" min = "1">
+        <label text = "text14"></label><br><br>
+        
+        <label text = "text5"></label>
+        <input type = "text" name = "wechat" required class = "input2"><br><br>
+        
+        <label text = "text6"></label>
+        <input type = "text" name = "qq" class = "input2"><br><br>
+        
+        <label text = "text7"></label>
+        <input type = "email" name = "email" class = "input3"><br><br>
+        
+        <label text = "text8"></label>
+        <input type = "text" name = "food" class = "input2"><br><br>
+        
+        <label text = "text9"></label>
+        <input type = "text" name = "music" class = "input2"><br><br>
+        
+        <label text = "text10"></label>
+        <input type = "text" name = "movie" class = "input2"><br><br>
+        
+        <label text = "text11"></label>
+        <input type = "text" name = "star" class = "input2"><br><br>
+        
+        <label text = "text12"></label><br>
+        <textarea name = "dedication" rows = "5" cols = "30" required></textarea><br><br>
+        
+        <button type = "submit" text = "text15"></button>
+    </form>
+    <div id = "result"></div>
 </body>

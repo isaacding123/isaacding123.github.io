@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
+    <meta charset = "utf-8">
     <style>@import "./style.css";</style>
     <script src = "./lang.js"></script>
     <script>
-        text = window.lang;
-        lang = "en-us";
+        text = window.lang
+        lang = ""
 
         function upd_theme() {
             hour = new Date().getHours()
@@ -26,20 +27,33 @@
                 document.body.classList.add("dark")
             }
         }
-        function upd_lang(lang) {
-            document.querySelectorAll('[text]').forEach(i => {
-                data = i.getAttribute('text');
-                i.textContent = text[lang][data];
-            });
-            document.title = text[lang]['title'];
+        function upd_lang() {
+            tmp = new URLSearchParams(window.location.search)
+            if (lang == "") {
+                if (tmp.has("lang")) lang = tmp.get("lang")
+                else lang = "en-us"
+            }
+            document.querySelectorAll("[text]").forEach(i => {
+                data = i.getAttribute("text")
+                i.textContent = text[lang][data]
+            })
+            document.title = text[lang]["title1"]
+            tmp.set("lang", lang)
+            tmp = window.location.pathname + "?" + tmp.toString()
+            window.history.replaceState({}, "", tmp)
+            class_album = document.getElementById("class-album")
+            class_album.href = './project/class-album.html?lang=' + lang;
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("lang").addEventListener("change", function (e) { upd_lang(e.target.value) });
-            upd_lang(lang);
-            upd_theme();
-            setInterval(upd_theme, 5000);
-        });
+            document.getElementById("lang").addEventListener("change", function (e) { lang = e.target.value; upd_lang() })
+            upd_lang(); upd_theme()
+            setInterval(upd_theme, 5000)
+            tmp = new URLSearchParams(window.location.search)
+            if (Array.from(document.getElementById("lang").options).some(t => t.value == tmp.get("lang"))) {
+                document.getElementById("lang").value = tmp.get("lang")
+            }
+        })
     </script>
 </head>
 
@@ -48,5 +62,5 @@
         <option value = "en-us">English(US)</option>
         <option value = "zh-cn">简体中文</option>
     </select>
-    <a href = "./project/class-album.html" text = "text2" theme></a>
+    <a href = "./project/class-album.html" text = "text2" id = "class-album" theme></a>
 </body>

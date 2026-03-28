@@ -1,14 +1,44 @@
 window.lang = {
     "en-us": {
-        "title": "Homepage",
+        "title0": "Homepage",
+        "title1": "Other project",
+        "title2": "Class album",
         "text0": "Nothing here!",
         "text1": "Other project",
-        "text2": "Class album"
+        "text2": "Class album",
+        "text3": "Name: ",
+        "text4": "Birthday: ",
+        "text13": "",
+        "text14": "",
+        "text5": "Wechat: ",
+        "text6": "QQ: ",
+        "text7": "E-mail: ",
+        "text8": "Favourite food: ",
+        "text9": "Favourite music: ",
+        "text10": "Favourite movie: ",
+        "text11": "Favourite star: ",
+        "text12": "Dedication: ",
+        "text15": "Submit"
     },
     "zh-cn": {
-        "title": "起始页",
+        "title0": "起始页",
+        "title1": "其他项目",
+        "title2": "同学录",
         "text0": "这里甚么也没有!",
         "text1": "其他项目",
-        "text2": "同学录"
+        "text2": "同学录",
+        "text3": "姓名: ",
+        "text4": "生日: ",
+        "text13": "月",
+        "text14": "日",
+        "text5": "微信: ",
+        "text6": "QQ: ",
+        "text7": "邮箱: ",
+        "text8": "最喜欢的食物: ",
+        "text9": "最喜欢的音乐: ",
+        "text10": "最喜欢的电影: ",
+        "text11": "最喜欢的明星: ",
+        "text12": "留言: ",
+        "text15": "确认"
     }
 }
