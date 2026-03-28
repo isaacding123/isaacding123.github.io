@@ -49,12 +49,12 @@ input {
 input.light {
     background-color: #fafafa;
     border-color: #202020;
-    color: #202020
+    color: #202020;
 }
 input.dark {
     background-color: #202020;
     border-color: #fafafa;
-    color: #fafafa
+    color: #fafafa;
 }
 
 textarea {
@@ -65,12 +65,12 @@ textarea {
 textarea.light {
     background-color: #fafafa;
     border-color: #202020;
-    color: #202020
+    color: #202020;
 }
 textarea.dark {
     background-color: #202020;
     border-color: #fafafa;
-    color: #fafafa
+    color: #fafafa;
 }
 
 select {
@@ -81,12 +81,12 @@ select {
 select.light {
     background-color: #fafafa;
     border-color: #202020;
-    color: #202020
+    color: #202020;
 }
 select.dark {
     background-color: #202020;
     border-color: #fafafa;
-    color: #fafafa
+    color: #fafafa;
 }
 
 button {
@@ -97,10 +97,10 @@ button {
 button.light {
     background-color: #fafafa;
     border-color: #202020;
-    color: #202020
+    color: #202020;
 }
 button.dark {
     background-color: #202020;
     border-color: #fafafa;
-    color: #fafafa
+    color: #fafafa;
 }
