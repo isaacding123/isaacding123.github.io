@@ -51,7 +51,7 @@
             for ([key, value] of form) {
                 json[key] = value
             }
-            result.innerHTML = "posting to" + target_url
+            result.innerHTML = "posting to " + target_url
             try {
                 response = await fetch(target_url, {
                     method: 'POST',
