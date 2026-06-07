@@ -1,15 +1,14 @@
 window.lang = {
     "en-us": {
         "title0": "Homepage",
-        "title1": "Other project",
+        "title1": "Project",
         "title2": "Class album",
+        "title3": "Blogs",
         "text0": "Nothing here!",
         "text1": "Other project",
         "text2": "Class album",
         "text3": "Name: ",
         "text4": "Birthday: ",
-        "text13": "",
-        "text14": "",
         "text5": "Wechat: ",
         "text6": "QQ: ",
         "text7": "E-mail: ",
@@ -18,19 +17,21 @@ window.lang = {
         "text10": "Favourite movie: ",
         "text11": "Favourite star: ",
         "text12": "Dedication: ",
-        "text15": "Submit"
+        "text13": "",
+        "text14": "",
+        "text15": "Submit",
+        "text16": "B"
     },
     "zh-cn": {
         "title0": "起始页",
-        "title1": "其他项目",
+        "title1": "项目",
         "title2": "同学录",
-        "text0": "这里甚么也没有!",
+        "title3": "博客",
+        "text0": "这里什么也木有!",
         "text1": "其他项目",
         "text2": "同学录",
         "text3": "姓名: ",
         "text4": "生日: ",
-        "text13": "月",
-        "text14": "日",
         "text5": "微信: ",
         "text6": "QQ: ",
         "text7": "邮箱: ",
@@ -39,6 +40,8 @@ window.lang = {
         "text10": "最喜欢的电影: ",
         "text11": "最喜欢的明星: ",
         "text12": "留言: ",
+        "text13": "月",
+        "text14": "日",
         "text15": "确认"
     }
 }
