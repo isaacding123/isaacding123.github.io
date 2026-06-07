@@ -1,1 +1,0 @@
-# Isaacding's Blog

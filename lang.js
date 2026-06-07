@@ -20,7 +20,7 @@ window.lang = {
         "text13": "",
         "text14": "",
         "text15": "Submit",
-        "text16": "B"
+        "text16": "Blogs"
     },
     "zh-cn": {
         "title0": "起始页",
@@ -42,6 +42,7 @@ window.lang = {
         "text12": "留言: ",
         "text13": "月",
         "text14": "日",
-        "text15": "确认"
+        "text15": "确认",
+        "text16": "博客"
     }
 }
