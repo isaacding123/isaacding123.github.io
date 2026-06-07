@@ -10,6 +10,22 @@ body.dark {
     color: #fafafa;
 }
 
+select {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    border-width: 1px;
+    border-radius: 3px;
+}
+select.light {
+    background-color: #fafafa;
+    border-color: #202020;
+    color: #202020;
+}
+select.dark {
+    background-color: #202020;
+    border-color: #fafafa;
+    color: #fafafa;
+}
+
 .lang {
     position: absolute;
     bottom: 15px;
@@ -19,6 +35,8 @@ body.dark {
 a {
     font-family: Menlo, Monaco, "Courier New", monospace;
     text-decoration: none;
+    display: block;
+    padding-bottom: 5px;
 }
 a.light {
     background-color: #fafafa;
@@ -68,22 +86,6 @@ textarea.light {
     color: #202020;
 }
 textarea.dark {
-    background-color: #202020;
-    border-color: #fafafa;
-    color: #fafafa;
-}
-
-select {
-    font-family: Menlo, Monaco, "Courier New", monospace;
-    border-width: 1px;
-    border-radius: 3px;
-}
-select.light {
-    background-color: #fafafa;
-    border-color: #202020;
-    color: #202020;
-}
-select.dark {
     background-color: #202020;
     border-color: #fafafa;
     color: #fafafa;

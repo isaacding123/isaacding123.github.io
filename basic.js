@@ -1,5 +1,5 @@
 let texts = window.lang
-let lang = ""
+let lang = "zh-cn"
 
 function upd_theme() {
     hour = new Date().getHours()
