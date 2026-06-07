@@ -16,40 +16,7 @@
             }
         })
         async function submit(e) {
-            e.preventDefault()
-            target_url = "http://192.168.71.22:8080/submit"
-            form = new FormData(document.getElementById('form')).entries()
-            result = document.getElementById('result')
-            json = {}
-            for ([key, value] of form) {
-                json[key] = value
-            }
-            result.innerHTML = "posting to " + target_url
-            try {
-                response = await fetch(target_url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(json)
-                })
-                responseText = ""
-                if (response.headers.get("content-type")?.includes("application/json")) {
-                    responseText = JSON.stringify(await response.json())
-                }
-                else {
-                    responseText = await response.text()
-                }
-                if (response.ok) {
-                    result.innerHTML = `Posted successfully:<br>status: ${response.status}<br>response: ${responseText}`
-                }
-                else {
-                    result.innerHTML = `Error:<br>failed to post to ${target_url}<br>status: ${response.status}<br>${response.statusText}<br>response text: ${responseText}<br><br>Please try it later.`
-                }
-            }
-            catch (error) {
-                result.innerHTML = `Error:<br>failed to post to ${target_url}<br>message: ${error.message}<br><br>Please try it later.`
-            }
+            
         }
     </script>
 </head>

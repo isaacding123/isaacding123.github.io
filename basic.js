@@ -42,11 +42,11 @@ function upd_lang() {
     }
     elem = document.getElementById("blogs")
     if (elem != null) {
-        elem.href += './blogs/?lang=' + lang;
+        elem.href = './blogs/?lang=' + lang;
     }
     elem = document.getElementById("class-album")
     if (elem != null) {
-        elem.href += './class-album/?lang=' + lang;
+        elem.href = './class-album/?lang=' + lang;
     }
 }
 
