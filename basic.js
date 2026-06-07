@@ -37,9 +37,13 @@ function upd_lang() {
     tmp = window.location.pathname + "?" + tmp.toString()
     window.history.replaceState({}, "", tmp)
     projects = document.getElementById("project")
-    projects.href += '?lang=' + lang;
+    if (projects != null) {
+        projects.href += '?lang=' + lang;
+    }
     blogs = document.getElementById("blogs")
-    blogs.href += '?lang=' + lang;
+    if (blogs != null) {
+        blogs.href += '?lang=' + lang;
+    }
 }
 
 function event_lis() {
