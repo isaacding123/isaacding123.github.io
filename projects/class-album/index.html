@@ -41,14 +41,14 @@
                     responseText = await response.text()
                 }
                 if (response.ok) {
-                    result.innerHTML = `Posted successfully:<br>status: ${response.status}<br>response: ${responseText}`
+                    result.innerHTML = `posted successfully:<br>status: ${response.status}<br>response: ${responseText}`
                 }
                 else {
-                    result.innerHTML = `Error:<br>failed to post to the server<br>status: ${response.status}<br>${response.statusText}<br>response text: ${responseText}<br><br>Please try it later.`
+                    result.innerHTML = `error:<br>failed to post to the server<br>status: ${response.status}<br>${response.statusText}<br>response text: ${responseText}<br><br>Please try it later.`
                 }
             }
             catch (error) {
-                result.innerHTML = `Error:<br>failed to post to the server<br>message: ${error.message}<br><br>Please try it later.`
+                result.innerHTML = `error:<br>failed to post to the server<br>message: ${error.message}<br><br>Please try it later.`
             }
         }
     </script>
