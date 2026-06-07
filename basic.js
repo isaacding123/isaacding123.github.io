@@ -36,13 +36,17 @@ function upd_lang() {
     tmp.set("lang", lang)
     tmp = window.location.pathname + "?" + tmp.toString()
     window.history.replaceState({}, "", tmp)
-    projects = document.getElementById("project")
-    if (projects != null) {
-        projects.href += '?lang=' + lang;
+    elem = document.getElementById("project")
+    if (elem != null) {
+        elem.href = './projects/?lang=' + lang;
     }
-    blogs = document.getElementById("blogs")
-    if (blogs != null) {
-        blogs.href += '?lang=' + lang;
+    elem = document.getElementById("blogs")
+    if (elem != null) {
+        elem.href += './blogs/?lang=' + lang;
+    }
+    elem = document.getElementById("class-album")
+    if (elem != null) {
+        elem.href += './class-album/?lang=' + lang;
     }
 }
 
