@@ -14,6 +14,7 @@ select {
     font-family: Menlo, Monaco, "Courier New", monospace;
     border-width: 1px;
     border-radius: 3px;
+    z-index: 15;
 }
 select.light {
     background-color: #fafafa;
