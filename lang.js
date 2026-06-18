@@ -15,12 +15,14 @@ window.lang = {
         "text8": "Favourite food: ",
         "text9": "Favourite music: ",
         "text10": "Favourite movie: ",
-        "text11": "Favourite star: ",
-        "text12": "Dedication: ",
-        "text13": "",
-        "text14": "",
-        "text15": "Submit",
-        "text16": "Blogs"
+        "text11": "Dedication: ",
+        "text12": "Submit",
+        "text13": "Blogs",
+        "text14": " Gender: ",
+        "text15": "Male",
+        "text16": "Female",
+        "text17": "Telephone: ",
+        "text18": "Favourite food: ",
     },
     "zh-cn": {
         "title0": "起始页",
@@ -38,11 +40,13 @@ window.lang = {
         "text8": "最喜欢的食物: ",
         "text9": "最喜欢的音乐: ",
         "text10": "最喜欢的电影: ",
-        "text11": "最喜欢的明星: ",
-        "text12": "留言: ",
-        "text13": "月",
-        "text14": "日",
-        "text15": "提交",
-        "text16": "博客"
+        "text11": "留言: ",
+        "text12": "提交",
+        "text13": "博客",
+        "text14": " 性别: ",
+        "text15": "男",
+        "text16": "女",
+        "text17": "电话: ",
+        "text18": "最喜欢的颜色: "
     }
 }
